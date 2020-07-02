@@ -7,11 +7,28 @@ import 'bulma'
 export function App() {
     return (
         <>
-            <header className="container is-fullhd">
-                <div className="notification">
-                    <h1>Welcome to nora app</h1>
+            <section className="hero is-primary is-bold">
+                <div className="hero-body">
+                    <div className="container">
+                        <h1 className="title">
+                            Wecome to nora app
+      </h1>
+                        <h2 className="subtitle">
+                            enjoy your time
+      </h2>
+                    </div>
                 </div>
-            </header>
+                <div className="hero-foot">
+                    <nav className="tabs">
+                        <div className="container">
+                            <ul>
+                                <li className="is-active"><a>Home</a></li>
+                                <li><a>About ua</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </section>
             <section className="section">
                 <div className="container">
                     <ItemCard />
