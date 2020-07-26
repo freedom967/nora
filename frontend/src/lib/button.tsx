@@ -1,7 +1,7 @@
 import React from "react";
 import { joinProps } from "./utils/joinCssProps";
-import type {size} from './size';
-import type {color} from './color';
+import type {size} from './utils/size';
+import type {color} from './utils/color';
 
 interface ButtonProps {
     size?: size;
