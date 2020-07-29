@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
+import { Navbar } from "../components/navBar";
 
 export const AddNote = () => {
     const [tilteInput, setTitle] = useState('');
@@ -23,6 +24,8 @@ export const AddNote = () => {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className="columns">
             <div className="column is-half is-offset-one-quarter">
                 <form onSubmit={handleSubmit}>
@@ -46,5 +49,6 @@ export const AddNote = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 }
