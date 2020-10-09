@@ -22,6 +22,12 @@ def modify_item_title(item_id: int, new_title: str, db: Session = Depends(get_db
     return users
 
 
+@router.get("/item/{item_id}", response_model=schemas.Item)
+def delect_item(item_id: int, db: Session = Depends(get_db)):
+    users = crud.delete_note(db, item_id)
+    return users
+
+
 @router.get("/", response_model=List[schemas.Item])
 def read_notes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_notes(db, skip=skip, limit=limit)

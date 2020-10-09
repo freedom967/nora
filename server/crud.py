@@ -31,3 +31,8 @@ def modify_note_title(db: Session,item_id: int, new_title: str):
     db.commit()
     db.refresh(db_item)
     return db_item
+def delete_note(db: Session,item_id: int):
+    db_item:models.Note = db.query(models.Note).filter(models.Note.note_id==item_id).first()
+    db.delete(db_item)
+    db.commit()
+    return db_item
